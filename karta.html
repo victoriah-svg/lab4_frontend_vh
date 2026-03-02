@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karta</title>
     <link rel="stylesheet" href="/src/CSS/main.scss">
+    <!--leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!--leaflet-->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
+
 <body>
     <header id="headerNav" class="topnav">
-    <a href="/" id="logo">CSS-Preproccessorer</a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="/">Startsida</a></li>
-        <li><a href="/about">Om SASS</a></li>
-        <li><a href="/animering">Animering</a></li>
-        <li><a href="/diagram">Diagram</a></li>
-        <li><a href="/karta" class="active">Karta</a></li>
-      </ul>
-    </nav>
-    <!--hamburgerikon-->
+        <a href="/" id="logo">CSS-Preproccessorer</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Startsida</a></li>
+                <li><a href="/about">Om SASS</a></li>
+                <li><a href="/animering">Animering</a></li>
+                <li><a href="/diagram">Diagram</a></li>
+                <li><a href="/karta" class="active">Karta</a></li>
+            </ul>
+        </nav>
+        <!--hamburgerikon-->
         <div id="hamburger">
             <img src="/images/menuebar.svg" alt="meny">
         </div>
-  </header>
+    </header>
     <main>
-
+        <input type="text" id="searchBox">
+        <button type="submit" id="searchBtn">Sök</button>
+        <div id="mapLeaflet"></div>
     </main>
     <script type="module" src="/src/js/main.js"></script>
     <script type="module" src="/src/js/karta.js"></script>
 </body>
+
 </html>
