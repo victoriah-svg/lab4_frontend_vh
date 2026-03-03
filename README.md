@@ -1,10 +1,10 @@
-# CSS preprocessorer - uppgift 3 Frontendutveckling Mittuniversitetet 
+# Dynamiska webbplatser - uppgift 5 Frontendutveckling Mittuniversitetet 
 
 ## 🌟Syfte : 
-* Skapa en webbplats med hjälp av **SASS**. 
-Syftet med denna uppgift är att öva på att skapa animeringar med CSS och att använda SASS för att underlätta utveckling. 
+* Använda fetchAPI-anrop tillsammans med async / await och presentera data visuellt. 
+Syftet med denna uppgift är även att öva på att dokumentera kod med JSDOC. 
 Klona ner repot och kör följande kommandon:
     * npm install 
     * npm run dev
 
-#### 🌟Länk till [publicerad webbplats](https://animeringar-lab4-vh.netlify.app/animering)
+#### 🌟Länk till [publicerad webbplats]()
