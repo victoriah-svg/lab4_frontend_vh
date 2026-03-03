@@ -100,7 +100,7 @@ function addChartData(highestAplNumbCourses, highestAplNumbPrograms) {
             }]
         },
         options: {
-            backgroundColor: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            backgroundColor: ["#85b6c0", "#456853", "#223a3e", "#835faa", "Purple", "Orange"],
             scales: {
             x: {
                 ticks: {
@@ -129,7 +129,7 @@ function addChartData(highestAplNumbCourses, highestAplNumbPrograms) {
             }]
         },
         options: {
-            backgroundColor: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]
+            backgroundColor: ["#456848", "#dc7b0d", "#700cd4", "#57bfd4", "Purple", "Orange"]
         }
     });
 }
