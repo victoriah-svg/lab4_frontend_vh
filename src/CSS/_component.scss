@@ -22,6 +22,7 @@ ul {
     color: rgb(127, 31, 191);
 }
 
+/*Stylingknapp animeringssida*/
 #styleBtn {
     padding: 0.5em 1em;
     border-radius: 0.4rem;
@@ -36,4 +37,18 @@ ul {
 #styleBtn:hover {
     box-shadow: 0 0 30px rgb(16, 6, 23);
     cursor: pointer;
+}
+
+/*Sökknapp kartsida*/
+#searchBtn {
+    @extend #styleBtn;
+    max-height: 50px;
+}
+
+/*Sökruta kartsida*/
+#searchBox {
+    padding: 0.5em 1em;
+    border-radius: 0.4rem;
+    max-height: 20px;
+    margin-top: 20px;
 }

@@ -36,43 +36,43 @@
 
  /*Animeringssidan*/
  #mainAnimering {
-    max-width: 1000px;
-    margin: 0 auto;
-    justify-items: center;
+     max-width: 1000px;
+     margin: 0 auto;
+     justify-items: center;
  }
 
  /*Bilder animeringssidan*/
 
  .smallPictures {
-    padding: 0.5rem;
-    transition: 1s ease;
-     @extend %opacity-none; 
+     padding: 0.5rem;
+     transition: 1s ease;
+     @extend %opacity-none;
      width: 100px;
-     
+
  }
 
- 
+
  #smallPic1 {
      animation: pictureTransform 5s linear 1s 1 forwards;
-     
+
  }
 
  #smallPic2 {
-    animation: pictureTransform2 5s linear 2s 1 forwards;
+     animation: pictureTransform2 5s linear 2s 1 forwards;
  }
 
  #smallPic3 {
-    animation: pictureTransform3 5s linear 3s 1 forwards;
+     animation: pictureTransform3 5s linear 3s 1 forwards;
  }
 
  #smallPic4 {
-    animation: pictureTransform4 5s linear 4s 1 forwards;
+     animation: pictureTransform4 5s linear 4s 1 forwards;
  }
 
-.smallPictures:hover {
-    
-    width: 200px;
-    cursor: pointer;
+ .smallPictures:hover {
+
+     width: 200px;
+     cursor: pointer;
  }
 
  #windowPic {
@@ -81,49 +81,77 @@
 
  /*Heading animeringssidan*/
  #animationHeading {
-    animation: style 10s linear infinite paused, scale 5s alternate infinite none paused;
+     animation: style 10s linear infinite paused, scale 5s alternate infinite none paused;
  }
 
  /*StyleBtn*/
-#styleBtn{
-    opacity: 0;
-    animation: style 10s linear infinite none paused, pictureTransform 5s linear 1s 1 forwards;
-}
+ #styleBtn {
+     opacity: 0;
+     animation: style 10s linear infinite none paused, pictureTransform 5s linear 1s 1 forwards;
+ }
 
-/*Karta kartsidan*/
-#mapLeaflet {
-    height: 180px;
-    width: 300px;
-}
+ /*Main kartsida*/
+ #kartMain {
+    display: grid;
+    grid-template-rows: auto 1fr;
+ }
 
-/*Chart1 Stapeldiagram*/
-#myChartDiv1{
-    width: 900px;
-}
+ /*Searchbox kartsida*/
+ #searchBox {
+     justify-self: right;
+     grid-area: 1/1/2/2;
+ }
 
-/*Chart2 Cirkeldiagram*/
-#myChartDiv2{
-    width: 900px;
-}
+ /*Sökknapp*/
+ #searchBtn {
+    justify-self: left;
+    grid-area: 1/2/2/3;
+ }
+ 
+ /*Karta kartsidan*/
+ #mapLeaflet {
+     height: 500px;
+     width: 800px;
+     justify-self: center;
+     grid-area: 2/1/3/3;
+ }
+
+ 
+
+ /*Chart1 Stapeldiagram*/
+ #myChartDiv1 {
+     width: 900px;
+     justify-self: center;
+     padding-top: 40px;
+ }
+
+ /*Chart2 Cirkeldiagram*/
+ #myChartDiv2 {
+     width: 500px;
+     justify-self: center;
+     padding-top: 40px;
+     padding-bottom: 40px;
+     padding-top: 60px;
+ }
 
 
  /*----Header----*/
  .topnav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-}
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0.5rem 1rem;
+ }
 
-.nav-links {
-    display: flex;
-    gap: 1rem;
-}
+ .nav-links {
+     display: flex;
+     gap: 1rem;
+ }
 
-/*----Hamburgermeny----*/
-#hamburger {
-    display: none;
-}
+ /*----Hamburgermeny----*/
+ #hamburger {
+     display: none;
+ }
 
 
  /*----Tabletläge----*/
@@ -155,6 +183,20 @@
          }
      }
 
+     /*Chart1 Stapeldiagram*/
+     #myChartDiv1 {
+         width: 700px;
+     }
+
+     /*Karta kartsidan*/
+     #mapLeaflet {
+         height: 400px;
+         width: 600px;
+         justify-self: center;
+     }
+
+
+
  }
 
  /*--Mobil-läge--*/
@@ -182,68 +224,90 @@
      }
 
      /*Hamburger*/
-     #hamburger{
+     #hamburger {
          display: block;
      }
 
-     .nav-links{
-        display: none;
-        flex-direction: column;
-        width: 100%;
+     .nav-links {
+         display: none;
+         flex-direction: column;
+         width: 100%;
      }
 
-      .topnav.responsive .nav-links {
-        display: flex;
-    }
+     .topnav.responsive .nav-links {
+         display: flex;
+     }
 
-    .topnav.responsive {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+     .topnav.responsive {
+         flex-direction: column;
+         align-items: flex-start;
+     }
 
      .topnav.responsive nav {
-        order: 2;
-        justify-self: end;
-    }
+         order: 2;
+         justify-self: end;
+     }
 
      #hamburger img {
-        width: 100%;
-        max-width: 30px;
-    }
+         width: 100%;
+         max-width: 30px;
+     }
 
-    #logo {
-        font-size: 1.2rem;
-    }
+     #logo {
+         font-size: 1.2rem;
+     }
 
-    #windowPic{
+     #windowPic {
          @include base.box-size (100%, 250px, false);
          padding-left: 25px;
-       
-    }
 
-    .smallPictures {
-    padding: 0.4rem;
-     width: 50px;
-     
- }
-   
-    
-    #mainAbout p {
-        width: 85%;
-        padding-right: 0.5rem;
-    }
+     }
 
-    /*storlek på main animeringssida*/
-    #mainAnimering {
-        width: 100%;
-        max-width: 300px;
-    }
+     .smallPictures {
+         padding: 0.4rem;
+         width: 50px;
 
-    /*Miniatyrbilder animeringssidan*/
-    .smallPictures:hover {
-    width: 70px;
-    
- }
+     }
+
+
+     #mainAbout p {
+         width: 85%;
+         padding-right: 0.5rem;
+     }
+
+     /*storlek på main animeringssida*/
+     #mainAnimering {
+         width: 100%;
+         max-width: 300px;
+     }
+
+     /*Miniatyrbilder animeringssidan*/
+     .smallPictures:hover {
+         width: 70px;
+
+     }
+
+     /*Chart1 Stapeldiagram*/
+     #myChartDiv1 {
+         width: 300px;
+
+
+     }
+
+     /*Chart2 Cirkeldiagram*/
+     #myChartDiv2 {
+         width: 300px;
+         justify-self: center;
+
+     }
+
+     /*Karta kartsidan*/
+     #mapLeaflet {
+         height: 250px;
+         width: 300px;
+         justify-self: center;
+     }
+
 
 
  }
@@ -264,6 +328,6 @@
      }
 
      #logo:hover {
-    text-shadow: 2px 2px 20px base.$color-text-background;
-}
+         text-shadow: 2px 2px 20px base.$color-text-background;
+     }
  }

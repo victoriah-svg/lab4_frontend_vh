@@ -100,8 +100,20 @@ function addChartData(highestAplNumbCourses, highestAplNumbPrograms) {
             }]
         },
         options: {
-            backgroundColor: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]
+            backgroundColor: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            scales: {
+            x: {
+                ticks: {
+                    minRotation: 45,
+                    maxRotation: 45
+                }
+            },
+            y: {
+                beginAtZero: true
+            }
         }
+        }
+        
     });
 
     const chartDiv2 = document.getElementById("myChart2");
